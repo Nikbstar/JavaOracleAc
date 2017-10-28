@@ -1,7 +1,10 @@
 package ru.nik66.lesson5.class_init;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
+        // Загрузить класс до первого обращения к нему
+        Class.forName("ru.nik66.lesson5.class_init.MyClass");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~");
         MyClass myClass = new MyClass();
         System.out.println("~~~~~~~~~~~~~~~~~~~~");
         MyClass myClass1 = new MyClass();

@@ -8,7 +8,7 @@ public class Human {
     public static final int MIN_AGE = 0;
     public static final int MAX_AGE = 100;
     private String name;
-    private int age;
+    private byte age;
 
     @Override
     public String toString() {
@@ -24,7 +24,7 @@ public class Human {
 
     public void setAge(int age) {
         if (age >= MIN_AGE && age <= MAX_AGE) {
-            this.age = age;
+            this.age = (byte) age;
         } else {
             System.out.println("Wrong input, use age from " + MIN_AGE + " to " + MAX_AGE);
         }

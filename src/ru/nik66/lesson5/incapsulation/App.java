@@ -9,6 +9,10 @@ public class App {
     public static void main(String[] args) throws IOException {
         Human human = createHumanConsole();
         System.out.println(human);
+        Boss boss = Boss.getInstance("Vasya");
+        Boss boss1 = Boss.getInstance("Sveta");
+        // Выведет Sveta, т. к. объект один
+        System.out.println(boss);
     }
 
     private static Human createHumanConsole() throws IOException {
