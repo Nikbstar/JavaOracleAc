@@ -15,6 +15,25 @@ public class Shirt extends Clothing {
         this.color = shirtColor;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Shirt shirt = (Shirt) o;
+
+        if (size != shirt.size) return false;
+        return color == shirt.color;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + size;
+        result = 31 * result + (int) color;
+        return result;
+    }
 
     // Переопределили родительский метод, загрузили родительский и добавили свои параметры
     @Override

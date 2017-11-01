@@ -23,6 +23,7 @@ public class App {
         shirt.wash();
         System.out.println(shirt);
 
+        // Последовательность инициализации при наследовании
         C c = new C();
     }
 
