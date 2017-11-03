@@ -42,4 +42,9 @@ public class Shirt extends Clothing {
     public void wash() {
         System.out.println("Shirt is clear!");
     }
+
+    @Override
+    public String howToClean() {
+        return "50 degree";
+    }
 }
